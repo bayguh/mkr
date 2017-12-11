@@ -1,0 +1,95 @@
+{
+    "monitors": [
+        {
+            "name": "Inode sda1",
+            "type": "host",
+            "metric": "custom.inode.percentage.sda1.used",
+            "operator": ">",
+            "warning": 70,
+            "critical": 90,
+            "duration": 3
+        },
+        {
+            "name": "Inode sdb",
+            "type": "host",
+            "metric": "custom.inode.percentage.sdb.used",
+            "operator": ">",
+            "warning": 70,
+            "critical": 90,
+            "duration": 3
+        },
+        {
+            "name": "mail queue",
+            "type": "host",
+            "metric": "custom.mailq.count",
+            "operator": ">",
+            "warning": 20,
+            "critical": 40,
+            "duration": 3
+        },
+        {
+            "name": "Memcached Cache-size",
+            "type": "host",
+            "metric": "custom.memcached.cachesize.bytes",
+            "operator": ">",
+            "warning": 2000000000,
+            "critical": 3000000000,
+            "duration": 3
+        },
+        {
+            "name": "Memcached Connections",
+            "type": "host",
+            "metric": "custom.memcached.connections.curr_connections",
+            "operator": ">",
+            "warning": 800,
+            "critical": 1000,
+            "duration": 3
+        },
+        {
+            "name": "Port",
+            "type": "host",
+            "metric": "custom.linux.ss.TIME-WAIT",
+            "operator": ">",
+            "warning": 8000,
+            "critical": 10000,
+            "duration": 3
+        },
+        {
+            "name": "CPU",
+            "type": "host",
+            "metric": "cpu%",
+            "operator": ">",
+            "warning": 60,
+            "critical": 80,
+            "duration": 3
+        },
+        {
+            "name": "Disk",
+            "type": "host",
+            "metric": "disk%",
+            "operator": ">",
+            "warning": 60,
+            "critical": 80,
+            "duration": 3
+        },
+        {
+            "name": "connectivity",
+            "type": "connectivity"
+        },
+        {
+            "name": "外形監視",
+            "type": "external",
+            "method": "GET",
+            "url": "https://bayguh.co.jp",
+            "maxCheckAttempts": 3,
+            "certificationExpirationCritical": 10,
+            "certificationExpirationWarning": 30,
+            "headers": [
+                {
+                    "name": "Cache-Control",
+                    "value": "no-cache"
+                }
+            ]
+        }
+    ]
+}
